@@ -136,10 +136,6 @@ app.get('/refresh_token', async function (req, res) {
   }
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
-
 app.listen(process.env.PORT || port, () => {
   console.log(`app listening at http://localhost:${port}`);
 });
